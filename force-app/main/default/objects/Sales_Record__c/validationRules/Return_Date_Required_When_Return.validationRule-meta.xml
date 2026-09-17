@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Return_Date_Required_When_Return</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    Is_Return__c = true,
+    ISBLANK(Return_Date__c)
+)</errorConditionFormula>
+    <errorMessage>Return Date is required when Is Return is checked.</errorMessage>
+    <errorDisplayField>Return_Date__c</errorDisplayField>
+</ValidationRule>
